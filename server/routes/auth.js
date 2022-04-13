@@ -37,29 +37,26 @@ router.post('/register', async (req, res)=>{
         res.status(400).send(err);
     }
 
-    // ---- Login user ---- 
-    router.post('/login',async(req, res)=>{
+    
+
+})
+// ---- Login user ---- 
+    
+router.post('/login',async(req, res)=>{
         
-
-    //     // ---- validate data before a user ----
-    //     const validation2 = loginValidation(req.body);
-    // if(validation2.error){
-    //     res.status(400).send(validation2.error.details[0].message);
-        // ----- checking if the email exists -----
-        console.log(req.body)
-        const user = await User.findOne({
-            email: req.body.loginEmail,
-            password: req.body.loginPassword
-        });
-        if(!user) return res.status(400).send('Invalid Email or password');
-        // // ----- password is correct -----
-        // const validPass = await bcrypt(req.body.loginPassword, user.password);
-        // if(!validPass) return res.status(400).send('Invalid Email or password');
-        console.log(user);
-        res.send('logged in...');
-    // }   
-
-    })
+    // ----- checking if the email exists -----
+    console.log(req.body)
+    const user = await User.findOne({
+        email: req.body.loginEmail,
+        password: req.body.loginPassword
+    });
+    if(!user) return res.status(400).send('Invalid Email or password');
+    // // ----- password is correct -----
+    // const validPass = await bcrypt(req.body.loginPassword, user.password);
+    // if(!validPass) return res.status(400).send('Invalid Email or password');
+    console.log(user);
+    res.send('logged in...');
+// }   
 
 })
 
