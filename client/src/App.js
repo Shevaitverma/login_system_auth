@@ -8,19 +8,13 @@ function App() {
     const [page, setPage] = useState('login');
     
     return(
-        <div className="app">
-            {page === 'register' ? 
-
-            <Register /> : <Login />
-}
-
-<button onClick={() => {
-    setPage("register")
-}}>register</button>
-<button onClick={() => {
-    setPage("login")
-}}>login</button>
-
+        <div className="main_div">
+            <div className="Centre_div">
+            {page === 'register' ? <Register /> : <Login />}
+            <button className="button" onClick={() => {setPage("register")}}>register</button>
+            <button className="button" onClick={() => {setPage("login")}}>login</button>
+            </div>
+            
         </div>
     )
 }

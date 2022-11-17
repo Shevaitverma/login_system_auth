@@ -28,24 +28,24 @@ const Register = () =>{
 
     return(
         <>
-        <div>
-                    <h3>Regester User</h3>
+        <div className="register">
+                    <h3 className="logo">Regester User</h3>
                     <br/>
-                    <input 
+                    <input className="input"
                         placeholder="Name"
                         onChange={(event) => {
                             setRegisterName(event.target.value);
                         }}
                     />
                     <br/>
-                    <input 
+                    <input className="input"
                         placeholder="Email"
                         onChange={(event) => {
                             setRegisterEmail(event.target.value);
                         }}
                     />
                     <br/>
-                    <input 
+                    <input className="input"
                         type="password"
                         placeholder="Password"
                         onChange={(event) => {
@@ -53,7 +53,7 @@ const Register = () =>{
                         }}
                     />
                     <br/>
-                    <button onClick={register}>Create User</button>
+                    <button className="registerButton" onClick={register}>Create User</button>
                 </div>
         </>
     )

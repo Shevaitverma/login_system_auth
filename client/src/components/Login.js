@@ -25,24 +25,24 @@ const Login = () =>{
 
     return(
         <>
-        <div>
-                <h3> Login </h3>
+        <div className="login">
+                <h3 className="logo"> Login </h3>
                 <br/>
-                <input
+                <input className="input"
                     placeholder="Email"
                     onChange={(event) => {
                         setLoginEmail(event.target.value);
                     }}
                 />
                 <br/>
-                <input
+                <input className="input"
                     placeholder="Pasword"
                     onChange={(event) => {
                         setLoginPassword(event.target.value);
                     }}
                 />
                 <br/>
-                <button onClick={login}> Login</button>
+                <button className="loginButton" onClick={login}> Login</button>
             </div>
         </>
     )
